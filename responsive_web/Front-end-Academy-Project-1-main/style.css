@@ -1,0 +1,201 @@
+html { scroll-behavior: smooth; }
+:root {
+  --dark: #33292a; --light: #f2f2f2; --brown: #644b4f; --footer: #333;
+  --text-light: #fff; --a1: #efa69d; --a2: #e9877b; --nav-h: 40px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+body { font-family: "Roboto", sans-serif; }
+
+/* NAV */
+.navigation { background: var(--dark); position: relative; }
+.navigation-list { display: none; }
+.navigation ul { list-style: none; padding-left: 0; }
+.navigation-item a { text-decoration: none; color: var(--text-light); }
+.navigation-item a:hover, .navigation-item a:active {
+  border-bottom: 2px solid var(--a2); transition: border-bottom 1s;
+}
+.menu-icon { padding: 20px; }
+.menu-icon img {
+  cursor: pointer; position: absolute; right: 5%; top: 15%;
+}
+
+/* HERO */
+.hero {
+  background: url("images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg") center/cover no-repeat;
+  height: calc(100vh - var(--nav-h)); position: relative;
+}
+.hero-wrapper { width: 70%; }
+.hero-text {
+  color: var(--text-light); font-weight: bold; font-size: 2rem;
+  word-break: break-word; position: absolute; text-align: right;
+  right: 15%; bottom: 5%;
+}
+
+/* ABOUT */
+.about-us { width: 70%; margin: auto; }
+.about-us-wrapper { margin-bottom: 50px; }
+.about-us-text h2 { margin-top: 30px; }
+.about-us-text p { margin-top: 25px; }
+.about-us-image img {
+  border-radius: 10px; margin-top: 30px; width: 100%;
+  height: auto; object-fit: cover;
+}
+
+/* WHAT WE DO */
+.what-we-do {
+  background: var(--dark); color: var(--text-light); padding: 50px 0 25px;
+}
+.what-we-do-wrapper { width: 70%; margin: auto; }
+.what-we-do-text { text-align: center; }
+.what-we-do-icons {
+  display: flex; flex-direction: column; margin: auto;
+}
+.what-we-do-text p, .what-we-do-icons p {
+  margin: 25px 0 50px; font-weight: bold; text-align: center;
+}
+.what-we-do-icons p { font-size: 1.2rem; }
+.what-we-do-icon-1, .what-we-do-icon-2, .what-we-do-icon-3, .what-we-do-icon-4 {
+  display: flex; flex-direction: column; justify-content: space-between; margin: auto;
+}
+.what-we-do-icon-1 img, .what-we-do-icon-2 img, .what-we-do-icon-3 img, .what-we-do-icon-4 img {
+  width: 25%; align-self: center;
+}
+
+/* OUR TRIPS */
+.our-trips-wrapper { width: 100%; padding: 40px; margin: auto; }
+.our-trips-gallery {
+  display: grid; grid-template-rows: repeat(9, 1fr); grid-template-columns: 1fr;
+  place-items: center; row-gap: 15px;
+}
+.our-trips-gallery img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+/* CONTACTS */
+.contacts {
+  background: var(--brown); color: var(--text-light); padding: 50px 0 5px;
+}
+.contact-wrapper {
+  width: 70%; margin: auto; display: grid;
+  grid-template-columns: 1fr; grid-template-rows: 0.5fr 1.5fr 1fr;
+  column-gap: 15px;
+}
+.contacts-left-text { margin: 0 15px 30px 0; }
+.contacts-right-text p { margin-bottom: 15px; }
+.contacts-button { align-self: center; }
+.contacts-button p {
+  text-transform: uppercase; font-weight: bold;
+  padding: 10px 15px; display: inline;
+  background: var(--text-light); border: 2px solid; border-radius: 5px;
+}
+.contacts-button a { text-decoration: none; color: var(--a2); border-bottom: 2px solid transparent; }
+.contacts-button a:hover { border-bottom: 2px solid var(--a2); transition: 0.8s; }
+
+/* REVIEWS */
+.reviews-wrapper { width: 70%; margin: auto; }
+.reviews-first-block, .reviews-first-block h2 { text-align: center; }
+.reviews-first-block h2 { margin: 50px 0 20px; }
+.reviews-second-block {
+  display: flex; flex-wrap: wrap; row-gap: 30px; margin-top: 30px;
+}
+.review-1, .review-2 {
+  display: flex; flex-direction: column; align-items: center;
+}
+.reviews-second-block img {
+  width: 100px; height: 100px; object-fit: cover;
+  border-radius: 50%; margin: 15px 0;
+}
+.reviews-second-block p { text-align: center; }
+.reviews-second-block .author { padding: 20px 0; font-weight: bold; }
+
+/* GALLERY */
+.gallery-wrapper { width: 100%; margin: auto; }
+.gallery-images {
+  display: grid; grid-template-rows: repeat(4, 1fr); grid-template-columns: 1fr; place-items: center;
+}
+.gallery-images img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+  background: var(--footer); color: var(--text-light); padding: 30px 0;
+}
+.footer-container { width: 100%; margin: auto; }
+.footer-contact { text-align: center; padding-bottom: 20px; }
+.footer-contact a {
+  text-decoration: underline; font-weight: bold; display: inline;
+  color: var(--a1);
+}
+.footer-contact a:hover { color: var(--a2); text-decoration: none; }
+.footer-copyright p {
+  font-weight: bold; text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .hero-text { font-size: 4rem; }
+  .about-us-wrapper {
+    display: flex; justify-content: center; gap: 50px; align-items: stretch;
+  }
+  .about-us-text, .about-us-image {
+    flex: 1; display: flex; flex-direction: column;
+  }
+  .about-us-image img { height: 100%; }
+  .what-we-do-icons { flex-direction: row; }
+  .what-we-do-icon-1 img, .what-we-do-icon-2 img, .what-we-do-icon-3 img, .what-we-do-icon-4 img {
+    width: 4.5rem;
+  }
+  .what-we-do-icons p { font-size: 1.4rem; }
+  .our-trips-wrapper { width: 70%; padding: 30px 0; }
+  .our-trips-gallery {
+    grid-template-rows: repeat(3, 1fr); grid-template-columns: repeat(3, 1fr); gap: 15px;
+  }
+  .contact-wrapper {
+    grid-template-columns: 1fr 2fr; grid-template-rows: 1fr 1fr;
+    grid-template-areas: "left right" "left button";
+  }
+  .contacts-left-text { grid-area: left; text-align: left; margin-right: 15px; }
+  .contacts-right-text { grid-area: right; }
+  .contacts-button { grid-area: button; }
+  .reviews-first-block { width: 50%; margin: auto; }
+  .reviews-second-block { flex-wrap: nowrap; column-gap: 150px; }
+  .gallery-images { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); }
+}
+@media (min-width: 992px) {
+  .navigation-list {
+    font-weight: bold; display: flex; justify-content: space-between;
+    align-items: center; width: 70%; margin: auto; padding: 20px 0;
+  }
+  .menu-icon { display: none; }
+  .hero-text { font-size: 5rem; }
+}
+@media (min-width: 1200px) {
+  .hero-wrapper { width: 50%; }
+  .about-us-wrapper { width: 70%; }
+  .what-we-do-wrapper { width: 70%; }
+  .our-trips-wrapper { width: 70%; }
+  .contacts { padding: 50px 0; }
+  .reviews-wrapper { width: 70%; }
+  .gallery-wrapper { width: 70%; }
+}
+@media (max-width: 767px) {
+  .navigation-list { display: block; }
+  .menu-icon { display: block; }
+  .hero-text { font-size: 2rem; }
+  .about-us-wrapper, .what-we-do-wrapper, .our-trips-wrapper, .contacts, .reviews-wrapper, .gallery-wrapper {
+    width: 90%;
+  }
+}
+.navigation-list.visible {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--dark);
+  padding: 20px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+}
