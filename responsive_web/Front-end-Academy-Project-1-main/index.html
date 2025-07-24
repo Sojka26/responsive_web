@@ -15,29 +15,25 @@
     <title>Our Travel Web</title>
   </head>
   <body>
-    <!-- NAVIGATION -->
-    <nav class="navigation">
-      <ul class="navigation-list" id="navigation-menu">
-        <li class="navigation-item">
-          <a href="#about-us"><span>About Us</span></a>
-        </li>
-        <li class="navigation-item">
-          <a href="#what-we-do"><span>What We Do</span></a>
-        </li>
-        <li class="navigation-item">
-          <a href="#our-trips"><span>Our Trips</span></a>
-        </li>
-        <li class="navigation-item">
-          <a href="#contacts"><span>Where To Go</span></a>
-        </li>
-        <li class="navigation-item">
-          <a href="#reviews"><span>Reviews</span></a>
-        </li>
-      </ul>
-      <div class="menu-icon" id="menu-toggle">
-        <img src="icons/svg-icons/Hamburger-menu.svg" alt="hamburger menu" />
-      </div>
-    </nav>
+<!-- NAVIGATION -->
+<nav class="navigation">
+  <button id="menu-toggle" aria-label="Toggle menu">
+    <!-- SVG ikona hamburgeru -->
+    <svg width="30" height="30" viewBox="0 0 100 80" fill="#fff">
+      <rect width="100" height="15"></rect>
+      <rect y="30" width="100" height="15"></rect>
+      <rect y="60" width="100" height="15"></rect>
+    </svg>
+  </button>
+
+  <ul id="navigation-menu" class="navigation-list">
+    <li class="navigation-item"><a href="#about-us"><span>About Us</span></a></li>
+    <li class="navigation-item"><a href="#what-we-do"><span>What We Do</span></a></li>
+    <li class="navigation-item"><a href="#our-trips"><span>Our Trips</span></a></li>
+    <li class="navigation-item"><a href="#contacts"><span>Where To Go</span></a></li>
+    <li class="navigation-item"><a href="#reviews"><span>Reviews</span></a></li>
+  </ul>
+</nav>
     <!-- HERO SECTION -->
     <section class="hero">
       <div class="hero-wrapper">
